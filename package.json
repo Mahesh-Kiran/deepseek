@@ -1,0 +1,47 @@
+{
+    "name": "codegenie",
+    "displayName": "CodeGenie",
+    "description": "AI-powered coding assistant using DeepSeek Coder.",
+    "version": "1.0.0",
+    "publisher": "yourname",
+    "engines": {
+        "vscode": "^1.75.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "main": "dist/extension.js",
+    "contributes": {
+        "commands": [
+            {
+                "command": "codegenie.getCode",
+                "title": "CodeGenie: Generate Code"
+            },
+            {
+                "command": "codegenie.enableAutocomplete",
+                "title": "CodeGenie: Enable Autocomplete"
+            },
+            {
+                "command": "codegenie.disableAutocomplete",
+                "title": "CodeGenie: Disable Autocomplete"
+            }
+        ]
+    },
+    "scripts": {
+        "compile": "webpack --mode production",
+        "watch": "webpack --watch"
+    },
+    "dependencies": {
+        "axios": "^1.3.0",
+        "node-fetch": "^3.3.2"
+    },
+    "devDependencies": {
+        "@types/mocha": "^10.0.10",
+        "@types/node-fetch": "^2.6.12",
+        "@types/vscode": "^1.98.0",
+        "ts-loader": "^9.5.2",
+        "typescript": "^4.9.5",
+        "webpack": "^5.98.0",
+        "webpack-cli": "^5.1.4"
+    }
+}
